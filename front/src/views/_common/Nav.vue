@@ -5,23 +5,34 @@
     <h1 class="logo">Hackatonf5</h1>
     
     <ul class="menu">
-      <li><a href="">Aseo</a></li>
-      <li><a href="">Ocio</a>
-        <ul class="submenu">
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a>
-            <ul class="submenu2">
-              <li><a href="#">3.1</a></li>
-              <li><a href="#">2</a></li>
-            </ul>
-          </li>
-        </ul>
+      <li><a href="">Aseo</a>
+         <ul class="submenu">
+          <li><a href="#">Ducharse</a></li>
+          <li><a href="#">Cepillarse los dientes</a></li>
+          <li><a href="#">Vestirse</a></li>
+         </ul>
       </li>
-      <li><a href="">Alimentacion</a></li>
+      <li><a href="">Ocio</a>
+         <ul class="submenu">
+             <li><a href="#">Ir al colegio</a></li>
+             <li><a href="#">Deportes</a></li>
+              <li><a href="#">Musica</a></li>
+             <li><a href="#">Juego</a></li>
+         </ul>
+      </li>
+      <li><a href="">Alimentacion</a>
+          <ul class="submenu">
+             <li><a href="#">Desayuno</a></li>
+             <li><a href="#">Media mañana</a></li>
+              <li><a href="#">Comida</a></li>
+             <li><a href="#">Merienda</a></li>
+             <li><a href="#">Cena</a></li>
+         </ul>
+      </li>
       <li><a href="">Añadir Tareas</a></li>
       <li><router-link to="/">Home</router-link></li> |
-      <li><router-link to="/about">About</router-link></li>
+      <li><router-link to="/Login">Login</router-link></li>
+      <li><router-link to="/Register">Register</router-link></li>
       
     </ul>
   </nav>
