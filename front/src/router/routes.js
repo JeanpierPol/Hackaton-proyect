@@ -15,4 +15,8 @@ export const routes = [
     path: "/Login",
     component: () => import("@/views/Login/LoginPage.vue"),
   },
+  {
+    path: "/Register",
+    component: () => import("@/views/Register/RegisterPage.vue"),
+  },
 ];
