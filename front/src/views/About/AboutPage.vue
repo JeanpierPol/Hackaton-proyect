@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Proyecto de App para Asociación Asperger de Asturias</h1>
   </div>
 </template>
