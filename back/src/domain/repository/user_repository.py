@@ -10,7 +10,7 @@ class UserRepository(SqliteBasedRepository):
     def get_current_user(self):
         cursor = self._conn().cursor()
         cursor.execute(
-            "SELECT * FROM users where id = ?;", (self.get_current_user_id(),)
+            "SELECT * FROM user where user_id = ?;", (self.get_current_user_id(),)
         )
         data = cursor.fetchone()
 
@@ -19,7 +19,7 @@ class UserRepository(SqliteBasedRepository):
 
     def get_by_username(self, username):
         cursor = self._conn().cursor()
-        cursor.execute("SELECT * FROM users where username = ?;", (username,))
+        cursor.execute("SELECT * FROM user where username = ?;", (username,))
 
         data = cursor.fetchone()
 

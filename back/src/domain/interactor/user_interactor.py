@@ -21,7 +21,16 @@ class UserInteractor:
 
         current_user = self.user_repository.get_current_user()
 
-        if not current_user.is_admin:
+        if not current_user.user_rol=="admin":
             raise ForbiddenError({"msg": "you are not admin"})
 
         return {"msg": "you are admin"}
+
+    def get_current_superadmin(self):
+
+        current_user = self.user_repository.get_current_user()
+
+        if not current_user.user_rol=="superadmin":
+            raise ForbiddenError({"msg": "you are not superadmin"})
+
+        return {"msg": "you are superadmin"}

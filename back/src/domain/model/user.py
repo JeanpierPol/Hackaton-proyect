@@ -7,23 +7,24 @@ def hash_password(password):
 
 
 class User:
-    def __init__(self, id, username, name, password, is_admin):
-        self.id = id
+    def __init__(
+        self,
+        user_id,
+        username,
+        password,
+        user_mail,
+        user_rol,
+        user_status,
+        user_surename,
+        
+    ):
+        self.user_id = user_id
         self.username = username
-        self.name = name
+        self.user_mail = user_mail
+        self.user_rol = user_rol
         self.password = password
-        self.is_admin = bool(is_admin)
+        self.user_status = user_status
+        self.user_surename = user_surename
 
     def check_password(self, password):
-        return hash_password(password) == self.password
-
-    def __getstate__(self):
-
-        # not sending "password" when instance is "jsonified"
-
-        return {
-            "id": self.id,
-            "username": self.username,
-            "name": self.name,
-            "is_admin": self.is_admin,
-        }
+        return hash_password(password) == self.password 

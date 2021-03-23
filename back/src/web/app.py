@@ -38,6 +38,11 @@ def user():
 def only_for_admin():
     return json_response({"current_user": user_interactor.get_current_admin()}), 200
 
+@app.route("/api/only-for-superadmin", methods=["GET"])
+def only_for_superadmin():
+    return json_response({"current_user": user_interactor.get_current_superadmin()}), 200
+
+
 
 @app.route("/api/tasks", methods=["GET"])
 def tasks_get():
