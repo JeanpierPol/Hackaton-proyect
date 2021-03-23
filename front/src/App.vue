@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+      
     <Nav></Nav>
     <div id="main">
       <router-view />
@@ -25,5 +26,10 @@ export default {
 <style>
 #main {
   flex: 1;
+  background-image: url(https://longevitta.mx/wp-content/uploads/2020/02/EFEMERIDES-05-scaled.jpg);
+  background-size: cover;
+  margin-left: 8rem;
+  width:75%;
 }
+
 </style>

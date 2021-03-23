@@ -2,34 +2,35 @@
   <div id="nav">
     <header>
   <nav>
-    <h1 class="logo">Hackatonf5</h1>
+    
+    <img src="https://aspergerasturias.org/wp-content/uploads/2016/03/Logo-AAA_horizontal2_smll1.jpg" height="80" width="250">
     
     <ul class="menu">
-      <li><a href="">Aseo</a>
-         <ul class="submenu">
+      <li><router-link to="/Aseo">Aseo</router-link></li>
+         <!-- <ul class="submenu">
           <li><a href="#">Ducharse</a></li>
           <li><a href="#">Cepillarse los dientes</a></li>
           <li><a href="#">Vestirse</a></li>
-         </ul>
-      </li>
-      <li><a href="">Ocio</a>
-         <ul class="submenu">
+         </ul> -->
+      
+      <li><router-link to="/Ocio">Ocio</router-link></li>
+         <!-- <ul class="submenu">
              <li><a href="#">Ir al colegio</a></li>
              <li><a href="#">Deportes</a></li>
               <li><a href="#">Musica</a></li>
              <li><a href="#">Juego</a></li>
-         </ul>
-      </li>
-      <li><a href="">Alimentacion</a>
-          <ul class="submenu">
+         </ul> -->
+      
+      <li><router-link to="/Alimentacion">Alimentacion</router-link></li>
+          <!-- <ul class="submenu">
              <li><a href="#">Desayuno</a></li>
              <li><a href="#">Media mañana</a></li>
               <li><a href="#">Comida</a></li>
              <li><a href="#">Merienda</a></li>
              <li><a href="#">Cena</a></li>
-         </ul>
-      </li>
-      <li><a href="">Añadir Tareas</a></li>
+         </ul> -->
+      
+      <li><router-link to="/AñadirTareas">Añadir Tareas</router-link></li>
       <li><router-link to="/">Home</router-link></li> |
       <li><router-link to="/Login">Login</router-link></li>
       <li><router-link to="/Register">Register</router-link></li>
@@ -51,6 +52,7 @@
   padding: 0;
   font-family: 'Lato', sans-serif;
 }
+
 header{
   width: 100%;
   background-color: #38C1CA;
@@ -60,11 +62,7 @@ nav{
   justify-content: space-between;
   align-items: center;
 }
-.logo{
-  color: yellow;
-  padding: 10px;
-  font-size: 35px;
-}
+
 nav ul{
   list-style: none;
 }
@@ -80,13 +78,13 @@ nav ul{
   padding: 10px 14px;
 }
 .menu li:hover{
-  background-color: #73CE52;
+  background-color: #9BC734;
   color: white;
 }
 /*Submenu style*/
 .submenu{
   list-style: none;
-  background-color: #73CE52;
+  background-color: #9BC734;
   width: 140px;
   position: absolute;
   left: 0;
@@ -113,7 +111,7 @@ nav ul{
 /*Submenu2 style*/
 .submenu2{
   display: none;
-  background-color: #73CE52;
+  background-color: #9BC734;
   width: 140px;
   position: absolute;
   left: 100%;

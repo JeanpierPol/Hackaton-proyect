@@ -51,8 +51,8 @@ export default {
 
 <style scoped>
 .center {
-  margin-top: 5%;
-  margin-left: 40%;
+  margin-top: 2%;
+  margin-left: 80%;
 }
 input[type="text"],
 input[type="password"] {
@@ -64,7 +64,7 @@ input[type="password"] {
   box-sizing: border-box;
 }
 button {
-  background-color: #73ce52;
+  background-color: #38C1CA;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -91,4 +91,5 @@ button:hover {
 button:hover {
   opacity: 0.8;
 }
+
 </style>
