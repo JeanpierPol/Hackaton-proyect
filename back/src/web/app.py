@@ -1,11 +1,13 @@
+from flask import Flask, request  # type: ignore
 from src.lib.web import create_app, request, create_access_token, json_response
 
-from config import config
+
 
 from src.domain.interactor.task_interactor import TaskInteractor
 from src.domain.repository.task_repository import TaskRepository
 from src.domain.interactor.user_interactor import UserInteractor
 from src.domain.repository.user_repository import UserRepository
+from config import config
 
 app = create_app(config)
 
@@ -25,13 +27,13 @@ def auth_login():
     username = request.json.get("username", None)
     password = request.json.get("password", None)
     user = user_interactor.auth_user(username, password)
-    access_token = create_access_token(identity=user.id)
+    access_token = create_access_token(identity=user.user_id)
     return json_response({"access_token": access_token, "user": user})
 
 
-@app.route("/api/user", methods=["GET"])
-def user():
-    return json_response({"current_user": user_interactor.get_current_user()}), 200
+# @app.route("/api/user", methods=["GET"])
+# def user():
+#     return json_response({"current_user": user_interactor.get_current_user()}), 200
 
 
 @app.route("/api/only-for-admin", methods=["GET"])
@@ -47,3 +49,7 @@ def only_for_superadmin():
 @app.route("/api/tasks", methods=["GET"])
 def tasks_get():
     return json_response(task_interactor.get_all_tasks()), 200
+
+@app.route("/api/me", methods=["GET"])
+def user():
+    return json_response({"current_user": user_interactor.get_current_user()}), 200

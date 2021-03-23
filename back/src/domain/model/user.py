@@ -28,3 +28,13 @@ class User:
 
     def check_password(self, password):
         return hash_password(password) == self.password 
+    
+    def __getstate__(self):
+
+        return {
+            "user_id": self.user_id,
+            "user_username": self.user_username,
+            "user_mail": self.user_mail,
+            "user_rol": self.user_rol,
+            "user_status": self.user_status,
+        }

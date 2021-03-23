@@ -1,6 +1,8 @@
+import json
+import jsonpickle  # type: ignore
 from src.domain.model.user import User
 from src.lib.sqlite_based_repository import SqliteBasedRepository
-
+from pathlib import Path
 
 class UserRepository(SqliteBasedRepository):
     def __init__(self, config, database=None, get_current_user_id=lambda: None):

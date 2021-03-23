@@ -1,5 +1,6 @@
-from src.lib.errors import ForbiddenError, NotAuthorizedError
-
+from src.domain.repository.user_repository import UserRepository
+from src.lib.errors import NotAuthorizedError, ForbiddenError
+from src.domain.model.user import User
 
 class UserInteractor:
     def __init__(self, config, user_repository):
